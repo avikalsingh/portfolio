@@ -76,6 +76,7 @@ const Contact = () => {
                 ref={recaptchaRef}
                 sitekey="6LfxCQQsAAAAAIqI7ZQjsJevVuteOR2RlxYm9MH2"
                 onChange={onCaptchaChange}
+                theme="dark"
               />
 
               <button type='submit' value="Send" className='submitBtn'>Submit</button>
