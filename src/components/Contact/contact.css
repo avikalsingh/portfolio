@@ -54,6 +54,12 @@
     max-width: 60rem;
 }
 
+.contactForm .g-recaptcha {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
 .name, .email, .msg {
     font-size: medium;
     width: 100%;
