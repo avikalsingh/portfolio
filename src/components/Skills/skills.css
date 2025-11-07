@@ -1,71 +1,174 @@
+/* ===== Skills Section ===== */
 #skills {
     overflow: hidden;
     width: 100vw;
-    max-width: 65rem;
+    max-width: 70rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    color: #fff;
 }
 
+/* ===== Section Titles ===== */
 .skillTitle {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     padding-top: 3rem;
     margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+/* ===== Description Text ===== */
 .skillDesc {
     font-weight: 400;
-    font-size: 1rem;
-    max-width: 51rem;
+    font-size: 1.05rem;
+    max-width: 55rem;
     padding: 0 2rem;
+    color: #ddd;
+    line-height: 1.8;
 }
 
+/* ===== Skill Bars (Individual Boxes) ===== */
 .skillBars {
-    margin: 1.5rem;
+    margin: 2rem 0;
     width: 100vw;
-    max-width: 80%;
+    max-width: 85%;
     text-align: left;
 }
 
 .skillBar {
     display: flex;
-    margin: 1rem;
-    padding: 1.5rem 2rem;
-    border-radius: 0.5rem;
-    background: rgb(50, 50, 50);
+    align-items: center;
+    margin: 1.2rem 0;
+    padding: 1.8rem 2rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.85), rgba(30, 30, 30, 0.9));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+.skillBar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Skill Icons ===== */
 .skillBarImg {
     object-fit: cover;
     height: 3rem;
     width: 3rem;
-    margin-right: 2rem;
+    margin-right: 1.8rem;
+    filter: brightness(0.9);
+    transition: transform 0.3s ease;
 }
 
-.skillBarText>p {
-    font-size: 0.9rem;
-    font-weight: 200;
+.skillBar:hover .skillBarImg {
+    transform: scale(1.15);
 }
 
-@media screen and (max-width:720px) {
-    .skillBarText>p {
-        font-size: 2vw;
+/* ===== Skill Text ===== */
+.skillBarText h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #00bcd4;
+    margin-bottom: 0.3rem;
+}
+
+.skillBarText p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ccc;
+}
+
+/* ===== Tech Stack Section ===== */
+.techStack {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(30, 30, 30, 0.8));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 55rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.techStack:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.techStack h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.techStack p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ddd;
+    line-height: 1.8;
+    word-spacing: 0.2rem;
+}
+
+/* ===== Optional Hover Animation for Stack Items ===== */
+.techStack p span {
+    display: inline-block;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.techStack p span:hover {
+    color: #00bcd4;
+    transform: scale(1.1);
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 720px) {
+    .skillTitle {
+        font-size: 2.2rem;
     }
-}
-
-@media screen and (max-width:480px) {
-    .skillBarText>p {
-        font-size: 3vw;
+    .skillDesc {
+        font-size: 0.95rem;
+    }
+    .skillBar {
+        flex-direction: column;
+        text-align: center;
     }
     .skillBarImg {
-        height: 2.25rem;
-        width: 2.25rem;
+        margin-bottom: 1rem;
     }
-    .skillBarText>h2 {
+    .techStack {
+        padding: 1.8rem;
+    }
+    .techStack h3 {
+        font-size: 1.5rem;
+    }
+    .techStack p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skillBarText h2 {
         font-size: 5vw;
+    }
+    .skillBarText p {
+        font-size: 3.2vw;
+    }
+    .skillBarImg {
+        height: 2.3rem;
+        width: 2.3rem;
     }
 }

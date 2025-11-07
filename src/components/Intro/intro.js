@@ -9,12 +9,12 @@ const Intro = () => {
     <section id='intro'>
       <div className="introContent">
          <span className='hello'>Hello</span>
-         <span className='introText'>I'm <span className='introName'>Avikal</span> <br/> Data Scientist </span>
-         <p className='introPara'>I am a skilled data scientist with experience <br/> in Machine Learning</p>
-         <Link><button className='btn' onClick={() => {
-          document.getElementById('contact').scrollIntoView({behavior: 'smooth'})
+         <span className='introText'>I'm <span className='introName'>Avikal Singh <br/> </span> <span className='introTitle'> Data Scientist & Software Engineer </span></span>
+         <p className='introPara'>I build intelligent, data-driven systems by combining machine learning, <br/> full-stack development, and cloud computing.</p>
+         <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500}><button className='btn' onClick={() => {
+          document.getElementById('works').scrollIntoView({behavior: 'smooth'})
         }}> 
-            <img src={btnImg} alt='Hire' className='btnImg'/>Hire Me</button></Link>
+            <img src={btnImg} alt='Hire' className='btnImg'/>View My Work</button></Link>
       </div>
       <img src={bg} alt="Profile" className="bg"/>    
     </section>
