@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import './contact.css';
-import Walmart from '../../assets/walmart.png';
-import Adobe from '../../assets/adobe.png';
-import Microsoft from '../../assets/microsoft.png';
-import Facebook from '../../assets/facebook.png';
+// import Walmart from '../../assets/walmart.png';
+// import Adobe from '../../assets/adobe.png';
+// import Microsoft from '../../assets/microsoft.png';
+// import Facebook from '../../assets/facebook.png';
 import LinkedInIcon from '../../assets/LI-In-Bug.png';
 import GitHubIcon from '../../assets/github-mark-white.png';
 import emailjs from '@emailjs/browser';
@@ -51,18 +51,6 @@ const Contact = () => {
 
   return (
     <section id="contactPage">
-        <div id="clients">
-            <h1 className='contactPageTitle'>My Clients</h1>
-            <p className='clientDesc'>
-              I have had the privilege of working with some amazing clients over the years. Here are a few of them:
-            </p>
-            <div className="clientImgs">
-              <img src={Walmart} alt="Client" className='clientImg'/>
-              <img src={Adobe} alt="Client" className='clientImg'/>
-              <img src={Microsoft} alt="Client" className='clientImg'/>
-              <img src={Facebook} alt="Client" className='clientImg'/>
-            </div>
-        </div>
         <div id="contact">
             <h1 className='contactPageTitle'>Get In Touch</h1>
             <span className='contactDesc'> Please fill out the form below to discuss any work opportunities. </span>
